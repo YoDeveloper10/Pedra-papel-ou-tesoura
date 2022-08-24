@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Open sans', sans-serif;
+}
+
+body{
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff7676), to(#ff0000)) fixed;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+img{
+
+}
+
+header img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 70px;
+    z-index: 4;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+}
+
+.titulo{
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    padding: 15px 0;
+    border-bottom: 2px solid black;
+}
+
+.titulo h1{
+    color: #ec3c21;
+    font-size: 40px;
+}
+
+.player-options h2{
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    border-radius: 20px;
+    color: white;
+    padding: 15px;
+    font-size: 32px;
+    background-color: blue;
+}
+.enemy-options h2{
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    width: 300px;
+    color: white;
+    padding: 15px;
+    font-size: 32px;
+    background-color: red;
+}
+
+img{
+    max-width: 200px;
+}
+
+.player-options > div img,
+.enemy-options > div img
+{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+.player, .enemy{
+    top: 50%;
+    margin-top: 100px;
+    width: 50%;
+}
+
+.player h2{
+    text-align: center;
+    width: 100%;
+    font-size: 38px;
+    color: white;
+
+}
+
+.player-options,.enemy-options{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.player-options{
+    text-align: center;
+}
+
+.image-player, .image-enemy{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px ;
+}
+
+.enemy-options{
+    text-align: center;
+    
+}
+
+.align{
+    display: flex;
+    width: 100%;
+}
+.align h2,
+.align p{
+    display: block;
+    width: 10%;
+    text-align: center;
+
+}
+
+.vencedor, .jogada{
+    color: black;
+    text-align: center;
+}
+
+.modal{
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.resultados{
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.resultados h2{
+    width: 100%;
+    color: red;
+}
+
+.resultados h3{
+    position: relative;
+    right: -3%;
+
+
+    cursor: pointer;
+    top: -3%;
+}
+
+.resultados i{
+    position: absolute;
+    right: -15px;
+    top:-35px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: red;
+    font-weight: 900;
+    line-height: 24px;
+    background-color: #ff7676;
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 1380px) {
+    .player, .enemy{
+
+        margin-top: 40px;
+        width: 100%;
+    }
+    .align{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    img{
+        max-width: 100px;
+    }
+
+    header img{
+        max-width: 50px;
+    }
+}
